@@ -61,11 +61,8 @@ Given a single motion-blurred image and its corresponding event stream, BeSplat 
 ## 🛠️ Setup Instructions
 ## Installation
 
-```shell
-SET DISTUTILS_USE_SDK=1 # Windows only
-conda env create --file environment.yml
-conda activate deblur_gs
-```
+Follow the setup instructions for **3D Gaussian Splatting** for environment requirements and setup. 
+
 
 ### 2. Download Datasets
 We use real-world datasets from **E$^2$NeRF**, captured using the DAVIS346 color event camera, and synthetic datasets from **BeNeRF** for evaluations.
