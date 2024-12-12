@@ -54,8 +54,9 @@
 </p>
 
 <div>
-Given a single blurry image and its corresponding event stream, BeNeRF recovers the underlying 3D scene representation and the camera motion trajectory jointly. In particular, we represent the 3D scene with neural radiance fields and the camera motion trajectory with a cubic B-Spline in SE(3) space. Both the blurry image and accumulated events within a time interval can thus be synthesized from the 3D scene representation providing the camera poses. The camera trajectory, NeRF, are then optimized by minimizing the difference between the synthesized data and the real measurements.
+Given a single motion-blurred image and its corresponding event stream, BeSplat recovers the underlying 3D scene representation (Gaussian splats) and the camera motion trajectory jointly. Specifically, we represent the 3D scene using Gaussian Splatting and model the camera motion trajectory with a Bézier curve in SE(3) space. Both the blurry image and the accumulated events over a time interval can be synthesized from the 3D scene representation using the estimated camera poses. The scene representation and camera trajectory are optimized by minimizing the discrepancy between the synthesized data and the real-world measurements.
 </div>
+
 
 ## 🔥 QuickStart
 ### 1. Installation
