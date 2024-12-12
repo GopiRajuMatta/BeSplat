@@ -54,97 +54,66 @@
 </p>
 
 
-
+<p align="center">
+    <img src="./doc/Pipeline.png" alt="Pipeline" style="width:75%; height:auto;">
+</p>
 
 <div>
 Given a single motion-blurred image and its corresponding event stream, BeSplat recovers the underlying 3D scene representation (Gaussian splats) and the camera motion trajectory jointly. Specifically, we represent the 3D scene using Gaussian Splatting and model the camera motion trajectory with a Bézier curve in SE(3) space. Both the blurry image and the accumulated events over a time interval can be synthesized from the 3D scene representation using the estimated camera poses. The scene representation and camera trajectory are optimized by minimizing the discrepancy between the synthesized data and the real-world measurements.
 </div>
 
 
-## 🔥 QuickStart
-### 1. Installation
-In the path where your want to store code, enter the following terminal command:
+## 🛠️ Setup Instructions
+## Installation
 
-```bash
-git clone https://github.com/WU-CVGL/BeNeRF.git
-cd BeNeRF
-conda create -n benerf python=3.9
-conda activate benerf
-pip install -r requirements.txt
-```
-If the network speed is slow when using pip to download dependencies, you may consider changing the pip source:
-```bash
-python -m pip install --upgrade pip
-pip config set global.index-url https://mirrors.bfsu.edu.cn/pypi/web/simple
+```shell
+SET DISTUTILS_USE_SDK=1 # Windows only
+conda env create --file environment.yml
+conda activate deblur_gs
 ```
 
 ### 2. Download Datasets
-You can download `BeNeRF_Datasets` by clicking this [link](https://westlakeu-my.sharepoint.com/:f:/g/personal/cvgl_westlake_edu_cn/EjZNs8MwoXBDqT61v_j5V3EBIoKb8dG9KlYtYmLxcNJG_Q?e=AFXeUB). 
+We use real-world datasets from **E$^2$NeRF**, captured using the DAVIS346 color event camera, and synthetic datasets from **BeNeRF** for evaluations.
 
-It contains real-world dataset(e.g. *e2nerf_real*) and synthetic dataset(*benerf_blender*, *benerf_unreal* and *e2nerf_synthetic*). For the every scene, the folder `images` includes blurry images and folder `events` includes event stream for entire sequence. The timestamps of the start and end of exposure for each image are stored in a `txt` file. These timestamps are used to segment the entire event stream into individual event streams corresponding to each image. Additionally, we provide grounth sharp images in folder `images_test` for syntehtic dataset in order to evaluate metrics.
+- The **real-world datasets** contain five scenes: *letter*, *lego*, *camera*, *plant*, and *toys*.
+- The **synthetic datasets** from BeNeRF include three sequences from Unreal Engine: *livingroom*, *whiteroom*, and *pinkcastle*, and two sequences from Blender: *tanabata* and *outdoorpool*.
 
-For the scenes of `benerf_blender` and `benerf_unreal`, We provide two versions of the images: one in color and one in grayscale. The grayscale version is used for quantitative evaluation, while the color version is used for qualitative evaluation. Since event-enhanced baseline methods we compared to can only run with gray image due to the single channel event stream we synthesized, we compute the metrics of all methods with gray images for consistency.
+You can download the datasets from the following links:
 
-### 3. Train
-First, you need to modify the path of datasets in config file:
-```yml
-datadir = XXXXX/BeNeRF_Datasets/real or synthetic/<dataset>/<scene>
-```
-Then, You can train model by entering terminal command as follow:
-```bash
-python train.py --device <cuda_id> --config ./configs/<dataset>/<scene>.txt --index <img_id>
-```
-We use wandb as a viewr to moniter the training process by defalut:
+- **[Download BeNeRF Datasets](https://westlakeu-my.sharepoint.com/:f:/g/personal/cvgl_westlake_edu_cn/EjZNs8MwoXBDqT61v_j5V3EBIoKb8dG9KlYtYmLxcNJG_Q?e=AFXeUB)**
 
-<p align="center">
-    <img src="./doc/viewer.png" alt="display loss" style="width:75%; height:auto;">
-</p>
+### Training
 
-After training, all results including render image, render video, camera trajectory and checkpoint file will be saved in the path specified by `logdir/<img_id>/` in the config file.
-
-### 4. Test
-You can test the model by loading the checkpoint file saved in the `logdir/<img_id>/` path. We provide three options to test model.
-
-#### Extract poses
-```bash
-python test.py --device <cuda_id> --config ./configs/<dataset>/<scene>.txt --index <img_id> \
-               --extract_poses --num_extract_poses <the number of poses you want to extract>
-```
-We have set the default number of extracted poses to 19, i.e., `num_extract_poses = 19`.
-
-#### Render images
-```bash
-python test.py --device <cuda_id> --config ./configs/<dataset>/<scene>.txt --index <img_id> \ 
-               --render_images --num_render_images <the number of images you want to render>
-```
-We have set the default number of render images to 19, i.e., `num_render_images = 19`.
-
-#### Render video
-```bash
-python test.py --device <cuda_id> --config ./configs/<dataset>/<scene>.txt --index <img_id> --render_video
+```shell
+python train.py -s <path to dataset> --eval --deblur # Train with train/test split
 ```
 
-Of course, you can choose all three options simultaneously to test the model.
-```bash
-python test.py --device <cuda_id> --config ./configs/<dataset>/<scene>.txt --index <img_id> \
-               --extract_poses --num_extract_poses <the number of poses you want to extract> \
-               --render_images --num_render_images <the number of images you want to render> \
-               --render_video                                                           
-```
-The test results will be saved in `logdir/<img_id>/test_results` path.
+Additional Command Line Arguments for `train.py`
+
+* `blur_sample_num`: number of key frames for trajectory time sampling
+* `deblur`: switch the deblur mode
+* `mode`: models of camera motion trajectory (i.e. Linear, Spline, Bezier)
+* `bezier_order`: order of the Bézier curve when use Bézier curve for trajectory modeling
 
 
-### 5. Evaluation
-To compute metrics like PSNR, SSIM, LPIPS for evaluating model performance on synthetic dataset, you can run script as follow:
-```bash
-python evaluate.py --dataset <dataset name> --scene <scene name> \
-                   --result <path to folder of image results> --groundtruth <path to folder of groundtruth image>
-```
-For real-world datasets, since sharp ground truth images are not available, we choose to use the no-reference image quality metric `BRISQUE` to quantitatively evaluate the model's performance on real-world datasets. You can run the following script in MATLAB.
-```bash
-matlab -r "eval_brisque('<path to folder of image results>')"
+### Evaluation
 
+```shell
+python train.py -s <path to dataset> --eval # Train with train/test split
+python render.py -m <path to trained model> # Generate renderings
+python metrics.py -m <path to trained model> # Compute error metrics on renderings
 ```
+
+Additional Command Line Arguments for `render.py`
+
+* `optim_pose`: optimize the camera pose to align with the dataset
+
+### Render Video
+
+```shell
+python render_video.py -m <path to trained model>
+```
+
 ## Results
 You can check our results at the following link.
 
@@ -163,4 +132,5 @@ If you find this repository useful, please consider citing our paper:
 ```
 
 ## 🙏 Acknowledgment
-In our work, the camera optimization and event stream integration into NeRF were inspired by [BAD-NeRF](https://github.com/WU-CVGL/BAD-NeRF) and [E-NeRF](https://github.com/knelk/enerf), respectively. The overall code framework is based on [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch/). We appreciate the effort of the contributors to these amazing repositories.
+In our work, the camera trajectory optimization was inspired by [Deblur-GS](https://github.com/google-research/deblur-gs), and the event stream integration into Gaussian Splatting was inspired by the methodology used in [BeNeRF](https://github.com/akawincent/BeNeRF). The overall code framework is based on both repositories. We appreciate the efforts of the contributors to these amazing projects.
+
