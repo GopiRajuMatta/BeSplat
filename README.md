@@ -47,10 +47,10 @@
 - Our paper has been officially accepted to ECCV 2024—congratulations to all collaborators!  
 
 
-## 📋 Overview
+## 🔍 Approach
 
 <p align="center">
-    <img src="./doc/pipeline.jpg" alt="Pipeline" style="width:75%; height:auto;">
+    <img src="./doc/pipeline.png" alt="Pipeline" style="width:75%; height:auto;">
 </p>
 
 <div>
