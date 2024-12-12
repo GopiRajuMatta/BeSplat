@@ -50,7 +50,7 @@
 ## 🔍 Approach
 
 <p align="center">
-    <img src="./doc/pipeline.png" alt="Pipeline" style="width:75%; height:auto;">
+    <img src="./doc/Pipeline.png" alt="Pipeline" style="width:75%; height:auto;">
 </p>
 
 <div>
