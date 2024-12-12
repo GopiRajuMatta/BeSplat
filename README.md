@@ -59,13 +59,14 @@ Given a single motion-blurred image and its corresponding event stream, BeSplat 
 
 
 ## 🛠️ Setup Instructions
-## Installation
+
+### Installation
 
 Follow the setup instructions for **3D Gaussian Splatting** for environment requirements and setup. 
 
 
-### 2. Download Datasets
-We use real-world datasets from **E$^2$NeRF**, captured using the DAVIS346 color event camera, and synthetic datasets from **BeNeRF** for evaluations.
+### Download Datasets
+We use real-world datasets from **E2NeRF**, captured using the DAVIS346 color event camera, and synthetic datasets from **BeNeRF** for evaluations.
 
 - The **real-world datasets** contain five scenes: *letter*, *lego*, *camera*, *plant*, and *toys*.
 - The **synthetic datasets** from BeNeRF include three sequences from Unreal Engine: *livingroom*, *whiteroom*, and *pinkcastle*, and two sequences from Blender: *tanabata* and *outdoorpool*.
