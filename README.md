@@ -107,7 +107,7 @@ Additional Command Line Arguments for `render.py`
 python render_video.py -m <path to trained model>
 ```
 
-## Results
+### Results
 You can check our results at the following link.
 
 - [https://arxiv.org/abs/2407.02174](https://arxiv.org/abs/2407.02174)
