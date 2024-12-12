@@ -49,9 +49,10 @@
 
 ## 🔍 Approach
 
-<p align="center" style="background-color: #f0f0f0; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+<p align="center" style="background-color: #d3d3d3; padding: 25px; border-radius: 10px; box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);">
     <img src="./doc/Pipeline.png" alt="Pipeline" style="width:75%; height:auto; border-radius: 8px;">
 </p>
+
 
 
 <div>
