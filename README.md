@@ -113,6 +113,7 @@ You can check our results at the following link.
 - [https://arxiv.org/abs/2407.02174](https://arxiv.org/abs/2407.02174)
 - [https://akawincent.github.io/BeNeRF/](https://akawincent.github.io/BeNeRF/)
 
+
 ## ✒️ Citation 
 If you find this repository useful, please consider citing our paper:
 ```bibtex
@@ -123,6 +124,7 @@ If you find this repository useful, please consider citing our paper:
     year = {2024}
 } 
 ```
+
 
 ## 🙏 Acknowledgment
 In our work, the camera trajectory optimization was inspired by [Deblur-GS](https://github.com/google-research/deblur-gs), and the event stream integration into Gaussian Splatting was inspired by the methodology used in [BeNeRF](https://github.com/akawincent/BeNeRF). The overall code framework is based on both repositories. We appreciate the efforts of the contributors to these amazing projects.
