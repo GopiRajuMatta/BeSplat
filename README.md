@@ -49,9 +49,10 @@
 
 ## 🔍 Approach
 
-<p align="center">
-    <img src="./doc/Pipeline.png" alt="Pipeline" style="width:75%; height:auto;">
+<p align="center" style="background-color: #f0f0f0; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <img src="./doc/Pipeline.png" alt="Pipeline" style="width:75%; height:auto; border-radius: 8px;">
 </p>
+
 
 <div>
 Given a single motion-blurred image and its corresponding event stream, BeSplat recovers the underlying 3D scene representation (Gaussian splats) and the camera motion trajectory jointly. Specifically, we represent the 3D scene using Gaussian Splatting and model the camera motion trajectory with a Bézier curve in SE(3) space. Both the blurry image and the accumulated events over a time interval can be synthesized from the 3D scene representation using the estimated camera poses. The scene representation and camera trajectory are optimized by minimizing the discrepancy between the synthesized data and the real-world measurements.
