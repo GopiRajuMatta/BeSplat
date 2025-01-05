@@ -29,7 +29,7 @@
 ## 🚀 Updates  
 - Project homepage is now live! Check it out [here](https://akawincent.github.io/BeNeRF/).  
 - Training, testing, and evaluation codes, along with datasets, are now available.  
-- Our paper has been officially accepted to ECCV 2024—congratulations to all collaborators!  
+ 
 
 
 ## 🔍 Approach
