@@ -1,18 +1,8 @@
 <h1 align="center">BeSplat – Gaussian Splatting from a Single Blurry Image and Event Stream</h1>
 <p align="center">
-    
-        <a href="https://www.linkedin.com/in/gopi-raju-matta-1b5347105">Gopi Raju Matta</a><sup>*</sup> &emsp;&emsp;
-        <a href="https://www.linkedin.com/in/reddypalli-trisha">Reddypalli Trisha</a>&emsp;&emsp;
-        <a href="https://www.ee.iitm.ac.in/kmitra">Kaushik Mitra</a>&emsp;&emsp;
-  
-</p>
-<p align="center">
-    <a href="https://akawincent.github.io">Wenpu Li</a><sup>1,5*</sup> &emsp;&emsp;
-    <a href="https://github.com/pianwan">Pian Wan </a><sup>1,2*</sup> &emsp;&emsp;
-    <a href="https://wangpeng000.github.io">Peng Wang</a><sup>1,3*</sup> &emsp;&emsp;
-    <a href="https://jinghangli.github.io/">Jinghang Li</a><sup>4</sup> &emsp;&emsp;
-    <a href="https://sites.google.com/view/zhouyi-joey/home">Yi Zhou</a><sup>4</sup> &emsp;&emsp;
-    <a href="https://ethliup.github.io/">Peidong Liu</a><sup>1†</sup>
+    <a href="https://www.linkedin.com/in/gopi-raju-matta-1b5347105">Gopi Raju Matta</a><sup>*</sup> &emsp;&emsp;
+    <a href="https://www.linkedin.com/in/reddypalli-trisha">Reddypalli Trisha</a>&emsp;&emsp;
+    <a href="https://www.ee.iitm.ac.in/kmitra">Kaushik Mitra</a>&emsp;&emsp;
 </p>
 
 
