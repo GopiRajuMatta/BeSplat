@@ -1,14 +1,10 @@
 <h1 align="center">BeSplat – Gaussian Splatting from a Single Blurry Image and Event Stream</h1>
 <p align="center">
     
-              <a href="https://www.linkedin.com/in/gopi-raju-matta-1b5347105">Gopi Raju Matta</a><sup>*</sup>
-            &nbsp &nbsp
-            
-              <a href="https://www.linkedin.com/in/reddypalli-trisha">Reddypalli Trisha</a>
-         &nbsp &nbsp
-            
-              <a href="https://www.ee.iitm.ac.in/kmitra">Kaushik Mitra</a>
-        &nbsp &nbsp
+        <a href="https://www.linkedin.com/in/gopi-raju-matta-1b5347105">Gopi Raju Matta</a><sup>*</sup> &emsp;&emsp;
+        <a href="https://www.linkedin.com/in/reddypalli-trisha">Reddypalli Trisha</a>&emsp;&emsp;
+        <a href="https://www.ee.iitm.ac.in/kmitra">Kaushik Mitra</a>&emsp;&emsp;
+  
 </p>
 
 
