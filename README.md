@@ -1,40 +1,31 @@
 <h1 align="center">BeSplat – Gaussian Splatting from a Single Blurry Image and Event Stream</h1>
 <p align="center">
-    <a href="https://akawincent.github.io">Wenpu Li</a><sup>1,5*</sup> &emsp;&emsp;
-    <a href="https://github.com/pianwan">Pian Wan </a><sup>1,2*</sup> &emsp;&emsp;
-    <a href="https://wangpeng000.github.io">Peng Wang</a><sup>1,3*</sup> &emsp;&emsp;
-    <a href="https://jinghangli.github.io/">Jinghang Li</a><sup>4</sup> &emsp;&emsp;
-    <a href="https://sites.google.com/view/zhouyi-joey/home">Yi Zhou</a><sup>4</sup> &emsp;&emsp;
-    <a href="https://ethliup.github.io/">Peidong Liu</a><sup>1†</sup>
+    
+              <a href="https://www.linkedin.com/in/gopi-raju-matta-1b5347105">Gopi Raju Matta</a><sup>*</sup>
+            &nbsp &nbsp
+            
+              <a href="https://www.linkedin.com/in/reddypalli-trisha">Reddypalli Trisha</a>
+         &nbsp &nbsp
+            
+              <a href="https://www.ee.iitm.ac.in/kmitra">Kaushik Mitra</a>
+        &nbsp &nbsp
 </p>
 
-<p align="center">
-    <sup>*</sup>equal contribution &emsp;&emsp; <sup>†</sup> denotes corresponding author.
-</p>
 
-<p align="center">
-    <sup>1</sup>Westlake University &emsp;&emsp;
-    <sup>2</sup>EPFL &emsp;&emsp;
-    <sup>3</sup>Zhejiang University &emsp;&emsp;
-    <sup>4</sup>Hunan University &emsp;&emsp; </br>
-    <sup>5</sup>Guangdong University of Technology 
-</p>
+
+
 
 <hr>
 
-<h5 align="center"> This paper was accepted by European Conference on Computer Vision (ECCV) 2024.</h5>
+<h5 align="center">This paper was accepted by the 1st Workshop on "Event-based Vision in the Era of Generative AI - Transforming Perception and Visual Innovation", held at WACV 2025.</h5>
+
 <h5 align="center"> If you like our project, please give us a star ⭐ on GitHub.</h5>
 
 <h5 align="center">
 
-[![arXiv](https://img.shields.io/badge/Arxiv-2407.02174-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2407.02174v3)
-[![pdf](https://img.shields.io/badge/PDF-Paper-orange.svg?logo=GoogleDocs)](./doc/2024_ECCV_BeNeRF_camera_ready_paper.pdf) 
-[![pdf](https://img.shields.io/badge/PDF-Supplementary-orange.svg?logo=GoogleDocs)](./doc/2024_ECCV_BeNeRF_camera_ready_supplementary.pdf) 
-[![pdf](https://img.shields.io/badge/PDF-Poster-orange.svg?logo=GoogleDocs)](https://akawincent.github.io/BeNeRF/demo/Poster.pdf) 
+
 [![Home Page](https://img.shields.io/badge/GitHubPages-ProjectPage-blue.svg?logo=GitHubPages)](https://akawincent.github.io/BeNeRF/)
-[![Paper With Code](https://img.shields.io/badge/Website-PaperwithCode-yellow.svg?logo=paperswithcode)](https://paperswithcode.com/paper/benerf-neural-radiance-fields-from-a-single)  
-[![Dataset](https://img.shields.io/badge/OneDrive-Dataset-green.svg?logo=ProtonDrive)](https://westlakeu-my.sharepoint.com/:f:/g/personal/cvgl_westlake_edu_cn/EjZNs8MwoXBDqT61v_j5V3EBIoKb8dG9KlYtYmLxcNJG_Q?e=AFXeUB)
-![GitHub Repo stars](https://img.shields.io/github/stars/WU-CVGL/BeNeRF)
+
 
 </h5>
 
@@ -110,19 +101,18 @@ python render_video.py -m <path to trained model>
 ### Results
 You can check our results at the following link.
 
-- [https://arxiv.org/abs/2407.02174](https://arxiv.org/abs/2407.02174)
 - [https://akawincent.github.io/BeNeRF/](https://akawincent.github.io/BeNeRF/)
 
 
 ## ✒️ Citation 
 If you find this repository useful, please consider citing our paper:
 ```bibtex
-@inproceedings{li2024benerf,
-    author = {Wenpu Li and Pian Wan and Peng Wang and Jinghang Li and Yi Zhou and Peidong Liu},
-    title = {BeNeRF: Neural Radiance Fields from a Single Blurry Image and Event Stream},
-    booktitle = {European Conference on Computer Vision (ECCV)},
-    year = {2024}
-} 
+@inproceedings{matta2025besplat,
+      title={{BeSplat – Gaussian Splatting from a Single Blurry Image and Event Stream}},
+      author={Gopi Raju Matta,Reddypalli Trisha,Kaushik Mitra},
+      year={2025},
+      booktitle =  booktitle = {Proceedings of the 1st Workshop on "Event-based Vision in the Era of Generative AI - Transforming Perception and Visual Innovation", held at WACV 2025},
+  }
 ```
 
 
