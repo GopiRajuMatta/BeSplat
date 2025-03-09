@@ -27,7 +27,7 @@
 
 
 ## 🚀 Updates  
-- Project homepage is now live! Check it out [here](https://akawincent.github.io/BeNeRF/).  
+- Project homepage is now live! Check it out [here](https://gopirajumatta.github.io/BeSplat/).  
 - Training, testing, and evaluation codes, along with datasets, are now available.  
  
 
