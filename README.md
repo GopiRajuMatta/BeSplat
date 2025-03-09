@@ -101,12 +101,14 @@ You can check our results at the following link.
 ## ✒️ Citation 
 If you find this repository useful, please consider citing our paper:
 ```bibtex
-@inproceedings{matta2025besplat,
-      title={{BeSplat – Gaussian Splatting from a Single Blurry Image and Event Stream}},
-      author={Gopi Raju Matta,Reddypalli Trisha,Kaushik Mitra},
-      year={2025},
-      booktitle =  booktitle = {Proceedings of the 1st Workshop on "Event-based Vision in the Era of Generative AI - Transforming Perception and Visual Innovation", held at WACV 2025},
-  }
+@InProceedings{Matta_2025_WACV,
+    author    = {Matta, Gopi Raju and Reddypalli, Trisha and Mitra, Kaushik},
+    title     = {BeSplat: Gaussian Splatting from a Single Blurry Image and Event Stream},
+    booktitle = {Proceedings of the Winter Conference on Applications of Computer Vision (WACV) Workshops},
+    month     = {February},
+    year      = {2025},
+    pages     = {917-927}
+}
 ```
 
 
