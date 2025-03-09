@@ -95,7 +95,7 @@ python render_video.py -m <path to trained model>
 ### Results
 You can check our results at the following link.
 
-- [https://akawincent.github.io/BeNeRF/](https://akawincent.github.io/BeNeRF/)
+- [https://gopirajumatta.github.io/BeSplat/](https://gopirajumatta.github.io/BeSplat/)
 
 
 ## ✒️ Citation 
