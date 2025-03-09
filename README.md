@@ -1,4 +1,4 @@
-<h1 align="center">BeSplat – Gaussian Splatting from a Single Blurry Image and Event Stream</h1>
+<h1 align="center">BeSplat: Gaussian Splatting from a Single Blurry Image and Event Stream</h1>
 <p align="center">
     <a href="https://www.linkedin.com/in/gopi-raju-matta-1b5347105">Gopi Raju Matta</a><sup>*</sup> &emsp;&emsp;
     <a href="https://www.linkedin.com/in/reddypalli-trisha">Reddypalli Trisha</a>&emsp;&emsp;
@@ -18,7 +18,7 @@
 <h5 align="center">
 
 
-[![Home Page](https://img.shields.io/badge/GitHubPages-ProjectPage-blue.svg?logo=GitHubPages)](https://akawincent.github.io/BeNeRF/)
+[![Home Page](https://img.shields.io/badge/GitHubPages-ProjectPage-blue.svg?logo=GitHubPages)](https://gopirajumatta.github.io/BeSplat/)
 
 
 </h5>
