@@ -88,7 +88,7 @@ Command Line Arguments:
 📌 **Note:**  
 
 We used `rgb_coeff=0.1` and `event_coeff_real=1.0` for real datasets, and `rgb_coeff=1.0` and `event_coeff_real=2.0` for synthetic datasets.  
-These values are dataset-specific and can be adjusted according to your dataset's characteristics.
+Please try out different values to get better results for your custom dataset.
 
 
 ### 🧪 Evaluation
