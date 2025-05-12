@@ -66,28 +66,28 @@ You can download the datasets from the following links:
 
 ```shell
 python train_modified_final_real.py \
-  -s /data/Gopi/Trisha/real-world_ours_v2/camera \
-  --index <INDEX> \
-  --rgb_coeff 0.1 \
-  --event_coeff_real 1.0
+  -s <source_path>
  ```
 
 #### 🔹 Synthetic Dataset Training
 
 ```shell
 python train_modified_final_synth.py \
-  -s /data/Gopi/Trisha/real-world_ours_v2/camera \
-  --index <INDEX> \
-  --rgb_coeff 1.0 \
-  --event_coeff_real 2.0
+  -s <source_path>
 ```
 
-Additional Command Line Arguments: 
-
+Command Line Arguments: 
+* `index`: Index of the input sequence to process
+* `rgb_coeff`: Weight for RGB loss component
+* `event_coeff_real`: Weight for event-based loss on real datasets
 * `blur_sample_num`: number of key frames for trajectory time sampling
 * `deblur`: switch the deblur mode
 * `mode`: models of camera motion trajectory (i.e. Linear, Spline, Bezier)
 * `bezier_order`: order of the Bézier curve when use Bézier curve for trajectory modeling
+
+📌 **Note:**  
+We used `rgb_coeff=0.1` and `event_coeff_real=1.0` for real datasets, and `rgb_coeff=1.0` and `event_coeff_real=2.0` for synthetic datasets.  
+These values are dataset-specific and can be adjusted according to your dataset's characteristics.
 
 
 ### 🧪 Evaluation
