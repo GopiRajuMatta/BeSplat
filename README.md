@@ -92,6 +92,24 @@ Additional Command Line Arguments:
 
 ### 🧪 Evaluation
 
+#### For Real Dataset
+
+```shell
+python train_modified_final_real.py \
+  -s /data/Gopi/Trisha/real-world_ours_v2/camera \
+  --index <INDEX> \
+  --eval
+```
+
+#### For Synthetic Dataset
+
+```shell
+python train_modified_final_synth.py \
+  -s /data/Gopi/Trisha/real-world_ours_v2/camera \
+  --index <INDEX> \
+  --eval
+```
+
 #### Rendering and Metrics
 
 ```shell
