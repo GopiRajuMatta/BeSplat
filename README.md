@@ -62,11 +62,27 @@ You can download the datasets from the following links:
 
 ### Training
 
+#### 🔹 Real Dataset Training
+
 ```shell
-python train.py -s <path to dataset> --eval --deblur # Train with train/test split
+python train_modified_final_real.py \
+  -s /data/Gopi/Trisha/real-world_ours_v2/camera \
+  --index <INDEX> \
+  --rgb_coeff 0.1 \
+  --event_coeff_real 1.0
+ ```
+
+#### 🔹 Synthetic Dataset Training
+
+```shell
+python train_modified_final_synth.py \
+  -s /data/Gopi/Trisha/real-world_ours_v2/camera \
+  --index <INDEX> \
+  --rgb_coeff 1.0 \
+  --event_coeff_real 2.0
 ```
 
-Additional Command Line Arguments for `train.py`
+Additional Command Line Arguments: 
 
 * `blur_sample_num`: number of key frames for trajectory time sampling
 * `deblur`: switch the deblur mode
@@ -74,17 +90,36 @@ Additional Command Line Arguments for `train.py`
 * `bezier_order`: order of the Bézier curve when use Bézier curve for trajectory modeling
 
 
-### Evaluation
+### 🧪 Evaluation
+
+#### For Real Dataset
 
 ```shell
-python train.py -s <path to dataset> --eval # Train with train/test split
-python render.py -m <path to trained model> # Generate renderings
-python metrics.py -m <path to trained model> # Compute error metrics on renderings
+python train_modified_final_real.py \
+  -s /data/Gopi/Trisha/real-world_ours_v2/camera \
+  --index <INDEX> \
+  --eval
 ```
 
-Additional Command Line Arguments for `render.py`
+#### For Synthetic Dataset
 
-* `optim_pose`: optimize the camera pose to align with the dataset
+```shell
+python train_modified_final_synth.py \
+  -s /data/Gopi/Trisha/real-world_ours_v2/camera \
+  --index <INDEX> \
+  --eval
+```
+
+#### Rendering and Metrics
+
+```shell
+python render.py -m <path to trained model>  # Generate renderings
+python metrics.py -m <path to trained model>  # Compute error metrics on renderings
+```
+
+**Additional Command Line Arguments for `render.py`:**
+
+- `optim_pose`: optimize the camera pose to align with the dataset
 
 ### Render Video
 
