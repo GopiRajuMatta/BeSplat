@@ -187,7 +187,7 @@ def training(dataset, opt, pipe, testing_iterations, saving_iterations, checkpoi
             image_, depth_, viewspace_point_tensor_, visibility_filter_, radii_ = render_pkg["render"], render_pkg[
                 "depth"], render_pkg["viewspace_points"], render_pkg["visibility_filter"], render_pkg["radii"]
             if iteration in saving_iterations:
-                render_path = os.path.join("output", args.source_path.split("/")[-1]+"_"+str(args.index)+"_rgb_"+str(args.rgb_coeff)+"_event_"+str(args.event_coeff_real)+"_samples_"+str(args.sharp_sample_num),"train","train_{}".format(iteration),"rgb")
+                render_path = os.path.join("output_spline", args.source_path.split("/")[-1]+"_"+str(args.index)+"_rgb_"+str(args.rgb_coeff)+"_event_"+str(args.event_coeff_real)+"_samples_"+str(args.sharp_sample_num),"train","train_{}".format(iteration),"rgb")
                 makedirs(render_path, exist_ok=True)
                 torchvision.utils.save_image(image_, os.path.join(
                     render_path, '{0:05d}'.format(idx) + "_" + str(iteration)+ ".jpg"))

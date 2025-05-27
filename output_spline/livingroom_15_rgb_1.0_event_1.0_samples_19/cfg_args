@@ -1,0 +1,1 @@
+Namespace(sh_degree=3, source_path='/home/gopi/Desktop/Gopi/BeSplat/livingroom', model_path='./output_spline/livingroom_15_rgb_1.0_event_1.0_samples_19', images='images', resolution=-1, white_background=False, data_device='cuda', bezier_order=7, mode='Spline', eval=True, visdom_server='127.0.0.1', visdom_port=2333)

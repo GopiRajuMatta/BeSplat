@@ -1,0 +1,1 @@
+Namespace(sh_degree=3, source_path='/home/gopi/Desktop/Gopi/BeSplat/real-world_ours_v2/camera', model_path='./output/camera_15_rgb_1.0_event_1.0', images='images', resolution=-1, white_background=False, data_device='cuda', bezier_order=7, mode='Spline', eval=False, visdom_server='127.0.0.1', visdom_port=2333)
